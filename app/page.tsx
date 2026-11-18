@@ -1,69 +1,53 @@
-import Image from "next/image";
 
+import Image from 'next/image';
+import printImg from '../public/printImage.png'
+import logo from "../public/logo.png"
+import desktopLogo from "../public/desktopLogo.svg"
+
+import './globals.css'
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className=''>
+       <nav className='py-[0.6rem] text-[#606060] font-semibold flex justify-between items-center lg: px-[2.5rem]'>
         <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+          src={logo}
+          alt='Логотип'
+          className='lg:hidden'
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        <Image
+          src={desktopLogo}
+          alt='Логотип'
+          className='hidden lg:inline w-[15rem]'
+        />
+        <ul className='flex gap-[2.5rem] '>
+          <li>3D MODELS</li>
+          <li>ABOUT</li>
+        </ul>
+        </nav>
+      <div className='lg:flex justify-center items-center gap-[6.25rem]'>
+        <div className='py-[0.6rem] px-5 lg:px-[2.5rem]'>
+       
+          <main className='lg:max-w-[37rem]'>
+            <div className="my-[2.5rem] flex flex-col gap-[2.5rem]" >
+              <p className='hidden lg:block font-medium'>Your go-to platform for 3D printing files</p>
+              <h1 className='text-4xl font-bold'>Discover what’s possible with 3D printing</h1>
+              <p className='text-2xl font-normal'>Join our community of creators and explore a vast library of user-submitted models.</p>
+              
+            </div>
+            <button
+              className='font-semibold text-xl p-[0.75rem] border-2 mb-[2.5rem]'
+            >BROWSE MODELS</button>
+            
+          </main>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+        <Image
+            src={printImg}
+            alt='Изображение продукции'
+            className='object-cover [mask-image:linear-gradient(to_bottom,transparent_0%,black_50%)] lg:mask-none max-w-[37rem] rounded-[50%]'
+          />
+      </div>
+      
     </div>
+    
   );
 }
