@@ -1,5 +1,4 @@
-import logo from "../../public/logo.png"
-import desktopLogo from "../../public/desktopLogo.svg"
+
 import printImg from "../../public/printImage.png"
 import stackLogo from "../../public/Stack.svg"
 import globeLogo from "../../public/GlobeSimple.svg"
@@ -10,22 +9,7 @@ import Image from "next/image"
 export default function About(){
     return (
         <>
-            <nav className='py-[0.6rem] text-[#606060] font-semibold flex justify-between items-center lg: px-[2.5rem] lg:fixed lg:w-[100%] lg:top-0 lg:left-0 lg:bg-[#FFFFFF]'>
-                <Image
-                src={logo}
-                alt='Логотип'
-                className='lg:hidden'
-                />
-                <Image
-                src={desktopLogo}
-                alt='Логотип'
-                className='hidden lg:inline w-[15rem]'
-                />
-                <ul className='flex gap-[2.5rem] '>
-                <li>3D MODELS</li>
-                <li className="text-[#f7742e] underline underline-offset-8 decoration-inherit ">ABOUT</li>
-                </ul>
-            </nav>
+            
 
             <main className="px-[1.25rem] pb-[1.25rem]">
                 <div className="lg:flex lg:pt-[5rem] lg:items-center lg: gap-[6.25rem] lg:justify-center">

@@ -8,22 +8,7 @@ import './globals.css'
 export default function Home() {
   return (
     <div>
-       <nav className='py-[0.6rem] text-[#606060] font-semibold flex justify-between items-center lg: px-[2.5rem]'>
-        <Image
-          src={logo}
-          alt='Логотип'
-          className='lg:hidden'
-        />
-        <Image
-          src={desktopLogo}
-          alt='Логотип'
-          className='hidden lg:inline w-[15rem]'
-        />
-        <ul className='flex gap-[2.5rem] '>
-          <li>3D MODELS</li>
-          <li>ABOUT</li>
-        </ul>
-      </nav>
+       
       <div className='lg:flex justify-center items-center gap-[6.25rem]'>
         <div className='py-[0.6rem] px-5 lg:px-[2.5rem]'>
        
