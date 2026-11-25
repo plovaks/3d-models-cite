@@ -28,7 +28,7 @@ export default function RootLayout({ children}: RootLayoutProps)
       
       <body>
         <header>
-        <nav className='py-[0.6rem] text-[#606060] font-semibold flex justify-between items-center lg: px-[2.5rem] lg:fixed lg:w-[100%] lg:top-0 lg:left-0 lg:bg-[#FFFFFF]'>
+        <nav className='py-[0.6rem] text-[#606060] font-semibold flex justify-between items-center lg: px-[2.5rem] lg:sticky lg:w-[100%] lg:top-0 lg:left-0 lg:bg-[#FFFFFF]'>
           <Link href="/">
           <Image
             src={logo}

@@ -11,3 +11,8 @@ export type Model = {
   category: string
   dateAdded: string
 }
+
+export type ModelDetailPageProps = {
+  params: Promise<{
+  id: string
+}>}
