@@ -1,6 +1,4 @@
-export type RootLayoutProps = Readonly<{
-    children: React.ReactNode
-}>
+import type { ReactNode } from "react"
 
 export type Model = {
   id: number
@@ -12,7 +10,48 @@ export type Model = {
   dateAdded: string
 }
 
+export type Category = {
+    displayName: string
+    slug: string
+}
+
+export type CategoriesData = {
+    categories: Category[]
+}
+
+
+export type RootLayoutProps = Readonly<{
+  children: React.ReactNode;
+}>
+
+export type CategoryLayoutProps = Readonly<{
+    children: React.ReactNode
+}>
+
+export type CategoryProps = {
+  params: Promise <
+  {
+    id:string
+  }>
+}
+
 export type ModelDetailPageProps = {
-  params: Promise<{
-  id: string
-}>}
+    params: Promise<{
+        id: string
+    }>
+}
+
+
+export type ModelCardProps = {
+    model: Model
+}
+
+export type ModelsGridProps = {
+    title: string
+    models: Model[]
+}
+
+export type PillProps = {
+    children: ReactNode
+    className?: string
+}

@@ -13,3 +13,11 @@
     font-family: var(--font-montserrat), sans-serif;
   }
 }
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;    
+  &::-webkit-scrollbar {
+    display: none;           
+  }
+}
